@@ -1,0 +1,112 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+nav{
+    position: fixed;
+    width: 100%;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 8vh;
+    background-color: black;
+    font-family: 'Poppins', sans-serif;
+}
+.logo{
+    color: rgb(226, 226, 226);
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    font-size: 45px;
+    font-family: 'Teko', sans-serif;
+}
+.nav-links{
+    display: flex;
+    justify-content: space-around;
+    width: 30%;
+}
+.nav-links a{
+    color: rgb(226, 226, 226);
+    text-decoration: none;
+    letter-spacing: 5px;
+    font-weight: 5px;
+    font-size: 15px;
+}
+.nav-links li{
+    list-style: none;
+}
+
+.anim {
+    display: none;
+    cursor: pointer;
+}
+
+.anim div{
+    width: 25px;
+    height: 2px;
+    background-color: rgb(226, 226, 226);
+    margin: 5px;
+    transition: all 0.2s ease;
+}
+
+@media screen and (max-width:1024px){
+    .nav-links{
+        width: 60%;
+    }
+}
+
+@media screen and (max-width:768px){
+    body{
+            overflow-x: hidden;
+    }
+    .nav-links{
+        position: absolute;
+         right: 0px;
+         height: 92vh;
+         top: 8vh;
+         background-color: black;
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         width: 50%;
+         transform: translateX(100%);
+         transition: transform 0.5s ease-in;      
+    }
+    .nav-links li{
+        opacity: 0;
+    }
+    .anim{
+        display: block;
+    }
+}
+.nav-active{
+    transform: translateX(0%);
+}
+
+@keyframes navLinkFade {
+    from{
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+.toggle .line1{
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+.toggle .line2{
+    opacity: 0;
+}
+.toggle .line3{
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+.main{
+    background-image: url(Images/backgroundimg.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 109vh;
+}
