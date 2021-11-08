@@ -1,5 +1,9 @@
 body {
     background-color: black;
+    scroll-behavior: smooth;
+}
+html{
+    scroll-behavior: smooth;
 }
 
 *{
@@ -203,4 +207,20 @@ p{
 #btnscrollup::after{
     transition: 0.2s linear;
 }
+#content1, #content2{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+a:hover{
+    color: rgb(150, 150, 150);
+    transition: 0.6s;
+}
+
+
 
