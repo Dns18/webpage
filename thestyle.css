@@ -1,6 +1,5 @@
 body {
-    background-color: black;
-    scroll-behavior: smooth;
+    background-color: rgb(0, 0, 0);
 }
 html{
     scroll-behavior: smooth;
@@ -39,7 +38,7 @@ nav{
     text-decoration: none;
     letter-spacing: 2px;
     font-weight: 5px;
-    font-size: 15px;
+    font-size: 18px;
 }
 .nav-links li{
     list-style: none;
@@ -151,8 +150,9 @@ h1{
     text-align: center;
     font-family: 'Poppins', sans-serif;
     letter-spacing: 3px;
+    margin-bottom: 20px;
 }
-p{
+.contenttext{
     color: rgb(230, 230, 230);
     text-align: center;
     font-family: 'Poppins', sans-serif;
@@ -166,7 +166,7 @@ p{
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    background-color: rgb(37, 37, 37);
+    background-color: rgb(77, 77, 77);
    /* box-shadow: 0 0 10px rgb(51, 51, 51);*/
     color: rgb(0, 0, 0);
     outline: none;
@@ -210,3 +210,86 @@ ul, li:hover{
 }
 
 
+/*   ::-webkit-scrollbar{
+        width: 0;
+    }
+*/
+h2, .date{
+    color: rgb(0, 0, 0);
+}
+.card{
+    display: grid;
+    grid-template-columns: 300px;
+    grid-template-rows: 200px 160px 70px;
+    grid-template-areas: "image" "text" "stats";
+
+    font-family: 'Poppins', sans-serif;
+    border-radius: 20px;
+    background: rgb(31, 31, 31);
+    box-shadow: 0px 0px 70px rgba(255, 255, 255, 0.253);
+    text-align: center;
+    
+    transition: 0.5s;
+    cursor: pointer;
+    margin:55px;
+}
+.card-image{
+    grid-area: image;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    background-size: cover;
+}
+.card-text{
+    grid-area: text;
+    background-color: rgb(36, 36, 36);
+    /*border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;*/
+    
+}
+.card-button{
+    grid-area: button;
+}
+.textcard{
+    
+}
+.card:hover {
+    transform: scale(1.06);
+    box-shadow: 0px 0px 70px rgba(90, 0, 0, 0.6);
+    border-radius: 50px;
+}
+.container{
+    display: flex;
+}
+h2, .card-text, .date, .dawname{
+    color: rgb(211, 211, 211);
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+.pic1{
+    background-image: url('Images/Ableton-Logo.wine.png');
+}
+.pic2{
+    background-image: url('Images/flstudiologo.png');
+    border-bottom-left-radius: 200px;
+    border-bottom-right-radius: 200px;
+}
+.and{
+    position: absolute;
+    color: rgb(230, 230, 230);
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    justify-content: center;
+    margin-top: 180px;
+    font-size: 30px;
+}
+
+
+footer{
+    background: rgb(37, 37, 37);
+    color: rgb(230, 230, 230);
+    font-family: 'Poppins', sans-serif;
+    margin-top: auto;
+    padding: 3.5em;
+    text-align: center;
+    
+}
