@@ -17,9 +17,10 @@ nav{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    min-height: 8vh;
+    min-height: 10vh;
     background-color: rgb(0, 0, 0, 0.8);
     font-family: 'Poppins', sans-serif;
+    z-index: 3;
 }
 .logo{
     color: rgb(226, 226, 226);
@@ -80,6 +81,7 @@ nav{
          align-items: center;
          width: 50%;
          transform: translateX(100%);
+       
          transition: transform 0.5s ease-in-out; 
     }
     .nav-links li{
@@ -87,10 +89,10 @@ nav{
     }
     .anim{
         display: block;
-        
     }
+    
 }
-.nav-active{
+.nav-active, .lines{
     transform: translateX(0%);
 }
 
@@ -104,16 +106,18 @@ nav{
         opacity: 1;
         transform: translateX(0px);
     }
+    
 }
 .toggle .line1{
-    transform: rotate(-45deg) translate(-5px, 6px);
+    transform: rotate(-45deg) translate(-4px, 6px);
 }
 .toggle .line2{
     opacity: 0;
 }
 .toggle .line3{
-    transform: rotate(45deg) translate(-5px, -6px);
+    transform: rotate(45deg) translate(-4px, -6px);
 }
+
 
 .main{
     background-image: url(Images/backgroundimg.jpg);
@@ -126,19 +130,17 @@ nav{
     width: 12px;
 }
 ::-webkit-scrollbar-track {
-    
     border-radius: 100vw;
     margin-block: 5px;
 }
 ::-webkit-scrollbar-thumb {
-    background: rgb(37, 37, 37);
+    background: rgb(80, 80, 80);
     border-radius: 100vw;
     border: 2px solid;
-    
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: rgb(31, 31, 31);
+    background: rgb(43, 43, 43);
 }
 
 .content{
@@ -203,13 +205,12 @@ a:hover{
     color: rgb(150, 150, 150);
 }
 a{
-    transition-duration: 0.3s;
+    transition-duration: 0.5s;
+    
 }
 ul, li:hover{
-    transition: 1.5s;
+    transition: 0.8s;
 }
-
-
 /*   ::-webkit-scrollbar{
         width: 0;
     }
@@ -226,7 +227,7 @@ h2, .date{
     font-family: 'Poppins', sans-serif;
     border-radius: 20px;
     background: rgb(31, 31, 31);
-    box-shadow: 0px 0px 70px rgba(255, 255, 255, 0.253);
+    box-shadow: 0px 0px 50px rgba(255, 255, 255, 0.253);
     text-align: center;
     
     transition: 0.5s;
@@ -244,21 +245,25 @@ h2, .date{
     background-color: rgb(36, 36, 36);
     /*border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;*/
+    cursor: initial;
+}
+.card-stats{
     
 }
-.card-button{
-    grid-area: button;
-}
-.textcard{
+/*.textcard{
     
-}
-.card:hover {
+}*/
+.card:hover{
     transform: scale(1.06);
-    box-shadow: 0px 0px 70px rgba(90, 0, 0, 0.6);
-    border-radius: 50px;
+    box-shadow: 0px 0px 70px rgba(235, 235, 235, 0.425);
+    border-radius: 5px;
+    cursor:initial;
 }
 .container{
     display: flex;
+    justify-content: space-around;
+    flex-flow: wrap;
+    
 }
 h2, .card-text, .date, .dawname{
     color: rgb(211, 211, 211);
@@ -267,11 +272,15 @@ h2, .card-text, .date, .dawname{
 }
 .pic1{
     background-image: url('Images/Ableton-Logo.wine.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 250px;
 }
 .pic2{
     background-image: url('Images/flstudiologo.png');
-    border-bottom-left-radius: 200px;
-    border-bottom-right-radius: 200px;
+    background-position: center;
+    background-size: 250px;
+    background-repeat: no-repeat;
 }
 .and{
     position: absolute;
@@ -281,8 +290,8 @@ h2, .card-text, .date, .dawname{
     justify-content: center;
     margin-top: 180px;
     font-size: 30px;
+    z-index: 1;
 }
-
 
 footer{
     background: rgb(37, 37, 37);
@@ -291,5 +300,33 @@ footer{
     margin-top: auto;
     padding: 3.5em;
     text-align: center;
-    
 }
+.cardbutton1{
+    border: none;
+    padding: 15px 60px;
+    border-radius: 25px;
+    font-size: 15px;
+    background-color: rgb(24, 24, 24);
+    color: rgb(230, 230, 230);
+    outline: none;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    /*text-transform: uppercase;*/
+}
+.cardbutton1:hover,.cardbutton1:focus{
+    background-color: rgb(49, 49, 49);
+    box-shadow: 0 0 5px rgb(185, 185, 185);
+    border-radius: 5px;
+}
+.cardbutton1:active{
+    background-color: rgb(29, 29, 29);
+}
+
+h4{
+    letter-spacing: 0px;
+    text-transform: uppercase;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 1px;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
