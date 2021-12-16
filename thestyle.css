@@ -330,3 +330,14 @@ h4{
     font-family: 'Roboto Condensed', sans-serif;
 }
 
+#videoBG{
+    position: relative;
+    max-width: 1200px;
+    outline: none;
+}
+@media (max-width: 1220px){
+#videoBG{
+        max-width: 90%;
+}
+
+}
